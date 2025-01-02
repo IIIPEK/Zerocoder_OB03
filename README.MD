@@ -25,7 +25,7 @@ The **Zoo Management System** is a Python-based application that simulates the o
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/IIIPEK/Zerocoder_OB03
    ```
 
 2. Navigate to the project directory:
