@@ -1,4 +1,5 @@
 class Employee:
+    type = "Employee"
     def __init__(self, name, age, salary):
         self.name = name
         self.age = age
@@ -12,6 +13,7 @@ class Employee:
         return f"Employee(name='{self.name}', age={self.age}, salary={self.salary}, position={self.position})"
 
 class ZooKeeper(Employee):
+    type = "Zoo Keeper"
     def __init__(self, name, age, salary):
         super().__init__(name, age, salary)
         self.position = "Zoo Keeper"
@@ -21,6 +23,7 @@ class ZooKeeper(Employee):
         print(animal.eat())
 
 class Veterinarian(Employee):
+    type = "Veterinarian"
     def __init__(self, name, age, salary):
         super().__init__(name, age, salary)
         self.position = "Veterinarian"

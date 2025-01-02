@@ -22,17 +22,24 @@ def animal_sound(animals):
         print(animal.make_sound())
 
 zoo = Zoo()
+zoo.read_lists()
 
-zoo.add_animal(Bird("Pigeon", 2))
-zoo.add_animal(Mammal("Lion", 5))
-zoo.add_animal(Reptile("Snake", 3))
+if not zoo.animal_exists("Pigeon"):
+    zoo.add_animal(Bird("Pigeon", 2, "Chirp"))
+if not zoo.animal_exists("Lion"):
+    zoo.add_animal(Mammal("Lion", 5))
+if not zoo.animal_exists("Snake"):
+    zoo.add_animal(Reptile("Snake", 3))
 
-zoo.add_employee(ZooKeeper("John", 30, 5000))
-zoo.add_employee(Veterinarian("Jane", 25, 6000))
+if  not zoo.employee_exists("John"):
+    zoo.add_employee(ZooKeeper("John", 30, 5000))
+if not zoo.employee_exists("Jane"):
+    zoo.add_employee(Veterinarian("Jane", 25, 6000))
 
 zoo.list_animals()
 zoo.list_employees()
 
+zoo.update_lists()
 animal_sound(zoo.get_animals())
 
 aimals=zoo.get_animals()
